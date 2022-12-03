@@ -16,15 +16,18 @@ Finally, the method being employed here is demonstrated more simply in the follo
 
 Deploy this example as follows.
 
-    git clone https://github.com/Nilpo/caddy-laravelsail.git
-    cd caddy-laravelsail
+    git clone https://github.com/Nilpo/caddy-laravelsail.git && cd caddy-laravelsail
+    docker run --rm --interactive --tty -v $(pwd):/app composer install
     ./vendor/bin/sail up -d
-    ./vendor/bin/sail artisan migrate        // optional, not required for demo
 
-Sail should handle all of the Composer and NPM dependencies by means of Docker Compose. Should you wish to force dependency updates, you may use the following while the Docker containers are running:
+While it's not entirely necessary for this demo, you may also install database migrations, NPM dependencies, and run Vite in development.
 
-    ./vendor/bin/sail composer install
+    ./vendor/bin/sail artisan migrate
     ./vendor/bin/sail npm  install
+
+If you make any major changes or alter the Caddy config, you'll need to rebuild all containers.
+
+    ./vendor/bin/sail down && ./vendor/bin/sail up --build -d
 
 ## Caveats
 
