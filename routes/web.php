@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/domain-verify', [CaddyProxyController::class, 'verifyDomain')];
+Route::get('/domain-verify', [CaddyProxyController::class, 'verifyDomain']);
