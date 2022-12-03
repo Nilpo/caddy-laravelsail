@@ -37,7 +37,7 @@ If you make any major changes or alter the Caddy config, you must rebuild all co
 
 ## Caveats
 
-For debugging purposes, the .env file has been committed to this repository. The is not a secure practice. As such, this project should **not** be forked or used as the basis of a production project.
+For debugging purposes, the .env file has been committed to this repository. This is not a secure practice. As such, this project should **not** be forked or used as the basis of a production project.
 
 ## License
 
