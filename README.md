@@ -16,9 +16,15 @@ Finally, the method being employed here is demonstrated more simply in the follo
 
 Deploy this example as follows.
 
-  git clone git@github.com:Nilpo/caddy-laravelsail.git
-  cd caddy-laravelsail
-  ./vendor/bin/sail up -d
+    git clone git@github.com:Nilpo/caddy-laravelsail.git
+    cd caddy-laravelsail
+    ./vendor/bin/sail up -d
+    ./vendor/bin/sail artisan migrate        // optional, not required for demo
+
+Sail should handle all of the Composer and NPM dependencies by means of Docker Compose. Should you wish to force dependency updates, you may use the following while the Docker containers are running:
+
+    ./vendor/bin/sail composer install
+    ./vendor/bin/sail npm  install
 
 ## Caveats
 
