@@ -22,17 +22,17 @@ docker run --rm --interactive --tty -v $(pwd):/app composer install
 ./vendor/bin/sail up -d
 ```
 
-While it's not entirely necessary for this demo, you may also install database migrations, NPM dependencies, and run the Vite dev script.
+While not entirely necessary for this demo, you may also install database migrations, NPM dependencies, and run the Vite dev script.
 
 ```shell
 ./vendor/bin/sail artisan migrate
 ./vendor/bin/sail npm -i && ./vendor/bin/sail npm run dev
 ```
 
-If you make any major changes or alter the Caddy config, you'll need to rebuild all containers.
+If you make any major changes or alter the Caddy config, you must rebuild all containers.
 
 ```shell
-./vendor/bin/sail down && ./vendor/bin/sail up --build -d
+./vendor/bin/sail up --build -d
 ```
 
 ## Caveats
