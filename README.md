@@ -42,5 +42,3 @@ For debugging purposes, the .env file has been committed to this repository. Thi
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
-This proof of concept is released into the Public Domain without license.
