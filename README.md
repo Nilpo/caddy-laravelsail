@@ -16,7 +16,7 @@ Finally, the method being employed here is demonstrated more simply in the follo
 
 Deploy this example as follows.
 
-    git clone git@github.com:Nilpo/caddy-laravelsail.git
+    git clone https://github.com/Nilpo/caddy-laravelsail.git
     cd caddy-laravelsail
     ./vendor/bin/sail up -d
     ./vendor/bin/sail artisan migrate        // optional, not required for demo
