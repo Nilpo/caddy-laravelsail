@@ -19,7 +19,7 @@ Deploy this example as follows.
 ```shell
 git clone https://github.com/Nilpo/caddy-laravelsail.git && cd caddy-laravelsail
 docker run --rm --interactive --tty -v $(pwd):/app composer install
-./vendor/bin/sail up -d
+./vendor/bin/sail up --build -d
 ```
 
 While not entirely necessary for this demo, you may also install database migrations, NPM dependencies, and run the Vite dev script.
@@ -32,7 +32,7 @@ While not entirely necessary for this demo, you may also install database migrat
 If you make any major changes or alter the Caddy config, you must rebuild all containers.
 
 ```shell
-./vendor/bin/sail up --build -d
+./vendor/bin/sail up --build --remove-orphans -d
 ```
 
 ## Caveats
